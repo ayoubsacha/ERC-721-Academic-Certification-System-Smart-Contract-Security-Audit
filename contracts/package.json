@@ -1,0 +1,30 @@
+{
+  "name": "university-certificate-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npx hardhat build",
+    "test": "npx hardhat test",
+    "test:solidity": "npx hardhat test solidity",
+    "test:node": "npx hardhat test nodejs",
+    "node": "npx hardhat node --hostname 127.0.0.1",
+    "export:abi": "npm run build && node scripts/deployment-files.mjs",
+    "deploy:local": "npx hardhat run scripts/deploy.ts --network localhost",
+    "deploy:sepolia": "npx hardhat run scripts/deploy.ts --network sepolia",
+    "mint:local": "npx hardhat run scripts/mint-demo.ts --network localhost",
+    "mint:sepolia": "npx hardhat run scripts/mint-demo.ts --network sepolia",
+    "typecheck": "npx hardhat build && npx tsc --noEmit"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^3.1.10",
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.7",
+    "@types/node": "^22.20.5",
+    "hardhat": "^3.22.0",
+    "typescript": "~6.0.3",
+    "viem": "^2.58.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.4.0"
+  }
+}

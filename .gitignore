@@ -1,0 +1,15 @@
+node_modules/
+artifacts/
+cache/
+coverage/
+dist/
+.npm-cache/
+.hardhat-cache/
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+test-results/
+playwright-report/
+frontend/src/config/deployment.local.json
